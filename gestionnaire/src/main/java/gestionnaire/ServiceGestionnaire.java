@@ -17,4 +17,9 @@ public interface ServiceGestionnaire {
 
     String etatCommande(int id);
 
+    int creerUtilisateur(String nom, String adresse);
+
+    boolean modifierUtilisateur(int id, String nom, String adresse);
+
+    boolean supprimerUtilisateur(int id);
 }

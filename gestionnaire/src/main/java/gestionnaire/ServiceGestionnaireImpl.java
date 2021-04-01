@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class ServiceGestionnaireImpl implements ServiceGestionnaire {
 
     private ArrayList<Commande> commandes;
-    private ArrayList<>
+    private ArrayList<Utilisateur> utilisateurs;
 
     @Override
     public boolean notifierCommande(Commande commande) {
@@ -61,10 +61,46 @@ public class ServiceGestionnaireImpl implements ServiceGestionnaire {
         return commande.getEtat();
     }
 
+    @Override
+    public int creerUtilisateur(String nom, String adresse) {
+        int id = utilisateurs.get(utilisateurs.indexOf(utilisateurs.size()-1)).getId()+1;
+        Utilisateur utilisateur = new Utilisateur(id, nom, adresse);
+        return id;
+    }
+
+    @Override
+    public boolean modifierUtilisateur(int id, String nom, String adresse) {
+        Utilisateur utilisateur = getUtilisateur(id);
+        if (utilisateur == null)
+            return false;
+        if (!nom.isEmpty())
+            utilisateur.setNom(nom);
+        if (!adresse.isEmpty())
+            utilisateur.setAddress(adresse);
+        return true;
+    }
+
+    @Override
+    public boolean supprimerUtilisateur(int id) {
+        Utilisateur utilisateur = getUtilisateur(id);
+        if (utilisateur == null)
+            return false;
+        utilisateurs.remove(utilisateur);
+        return true;
+    }
+
     private Commande getCommande(int id) {
         for (Commande commande : commandes) {
             if (commande.getId() == id)
                 return  commande;
+        }
+        return  null;
+    }
+
+    private Utilisateur getUtilisateur(int id) {
+        for (Utilisateur utilisateur : utilisateurs) {
+            if (utilisateur.getId() == id)
+                return  utilisateur;
         }
         return  null;
     }
