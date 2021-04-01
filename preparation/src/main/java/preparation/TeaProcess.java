@@ -5,14 +5,15 @@ import javax.xml.ws.Response;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.ExecutionException;
 
 public class TeaProcess extends JFrame {
 
     public TeaProcess() {
         super("TeaServiceAsynchronous Client");
 
-        NotebookService_Service notebookService = new NotebookService_Service();
-        NotebookService notebookPort = notebookService.getNotebookPort();
+        ServiceGestionnaire_Service gestionnaireService = new ServiceGestionnaire_Service();
+        ServiceGestionnaire gestionnairePort = gestionnaireService.getGestionnairePort();
 
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(500, 300));
@@ -40,19 +41,32 @@ public class TeaProcess extends JFrame {
 
                 info.setText("Le thé à été déposé sur la zone du client ?");
 
-                Response res = notebookPort.addPersonAsync(newPerson);
+                Response res = gestionnairePort.theEnPreparationAsync(6);
 
                 textArea.setText("Envoie des informations au gestionnaire ...\n");
+
+                TheEnPreparationResponse reponse = null;
+
+                try {
+                    reponse = (TheEnPreparationResponse)res.get();
+                } catch (InterruptedException interruptedException) {
+                    interruptedException.printStackTrace();
+                } catch (ExecutionException executionException) {
+                    executionException.printStackTrace();
+                }
 
                 // TODO: initialiser un service et un port.
 
                 // TODO: invoquer de manière asynchrone l'opération `addPerson` à partir du port précédent
 
                 if  (!res.isCancelled() && res.isDone()) {
-                    textArea.setText("Information envoyée !\n");
-
+                    if(reponse.isReturn()){
+                        textArea.setText("Information traitée !\n");
+                    } else{
+                        textArea.setText("Information n'a pas pu être traité !\n");
+                    }
                 } else {
-                    textArea.setText("Un problème est survenu !\n");
+                    textArea.setText("Un problème est survenu lors de l'envoie !\n");
                 }
 
 
