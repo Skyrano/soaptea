@@ -6,15 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="inventaire" />
-        <module name="livraison" />
         <module name="gestionnaire" />
       </profile>
       <profile name="Annotation profile for soaptea" enabled="true">
         <sourceOutputDir name="target/generated-sources/jaxws-wsimport" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="inventaire" />
         <module name="preparation" />
+        <module name="livraison" />
       </profile>
     </annotationProcessing>
   </component>
