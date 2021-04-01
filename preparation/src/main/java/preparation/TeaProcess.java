@@ -20,6 +20,7 @@ public class TeaProcess extends JFrame {
 
     final private JButton prepaCommence;
     final private JButton theLivre;
+    final private JButton fermeture;
 
     private JTextArea info;
     private int decompte = 4;
@@ -68,8 +69,13 @@ public class TeaProcess extends JFrame {
         theLivre.setPreferredSize(new Dimension(75, 30));
         theLivre.setVisible(false);
 
+        fermeture = new JButton("Quitter");
+        fermeture.setPreferredSize(new Dimension(75, 30));
+        fermeture.setVisible(false);
+
         buttonPanel.add(prepaCommence);
         buttonPanel.add(theLivre);
+        buttonPanel.add(fermeture);
         this.getContentPane().add(buttonPanel);
 
 
@@ -79,7 +85,7 @@ public class TeaProcess extends JFrame {
 
                 prepaCommence.setEnabled(false);
 
-                Response res = gestionnairePort.theEnPreparationAsync(6);
+                Response res = gestionnairePort.theEnPreparationAsync(id);
                 textArea.setText("Envoie des informations au gestionnaire ...\n");
                 TheEnPreparationResponse reponse = null;
                 try {
@@ -116,7 +122,7 @@ public class TeaProcess extends JFrame {
 
                 theLivre.setEnabled(false);
 
-                Response res = gestionnairePort.theEnPreparationAsync(6);
+                Response res = gestionnairePort.theEnPreparationAsync(id);
                 textArea.setText("Envoie des informations au gestionnaire ...\n");
                 TheEnPreparationResponse reponse = null;
                 try {
@@ -133,9 +139,10 @@ public class TeaProcess extends JFrame {
                     } else{
                         textArea.setText("Information n'a pas pu être traité !\n");
                     }
-                    info.setText("Votre travail de préparation est terminé, la fenètre va se fermer dans :\n        > - 5\n");
-                    waitForClose();
+                    info.setText("Votre travail de préparation est terminé !! Veuillez quitter le programme :");
 
+                    theLivre.setVisible(false);
+                    fermeture.setVisible(true);
 
                 }else {
                     textArea.setText("Un problème est survenu lors de l'envoie !\n");
@@ -145,29 +152,20 @@ public class TeaProcess extends JFrame {
             }
         });
 
+        fermeture.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                close();
+            }
+        });
+
         this.pack();
         this.setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 
-    public void waitForClose(){
-        Timer delay = new Timer(1000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                info.append("        > - "+decompte+"\n");
-                decompte--;
-                waitForClose();
-            }
-        });
-        delay.setRepeats(false);
-        while(decompte>0){
-            System.out.println(decompte);
-            decompte--;
-
-
-            delay.start();
-        }
+    public void close(){
         super.dispose();
     }
 }
