@@ -5,14 +5,24 @@ import java.util.ArrayList;
 public class Commande {
 
     private final int id;
+    private final int idUtilisateur;
     private ArrayList<String> listeThe;
     private ArrayList<Integer> nombreThe;
     private String etat;
 
-    public Commande(int id, ArrayList<String> listeThe, ArrayList<Integer> nombreThe) {
+    public Commande(int id, int idUtilisateur, ArrayList<String> listeThe, ArrayList<Integer> nombreThe) {
         this.id = id;
+        this.idUtilisateur = idUtilisateur;
         this.listeThe = listeThe;
         this.nombreThe = nombreThe;
+    }
+
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+
+    public String getEtat() {
+        return  this.etat;
     }
 
     public void ajouterThe(String nomThe, int nombre) {
@@ -61,9 +71,7 @@ public class Commande {
         return id;
     }
 
-
-
-
-
-
+    public int getIdUtilisateur() {
+        return idUtilisateur;
+    }
 }
