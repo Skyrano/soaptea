@@ -7,6 +7,7 @@ public class Commande {
     private final int id;
     private ArrayList<String> listeThe;
     private ArrayList<Integer> nombreThe;
+    private String etat;
 
     public Commande(int id, ArrayList<String> listeThe, ArrayList<Integer> nombreThe) {
         this.id = id;
