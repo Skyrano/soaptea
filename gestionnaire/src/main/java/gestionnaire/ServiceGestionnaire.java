@@ -15,4 +15,6 @@ public interface ServiceGestionnaire {
 
     boolean theLivre(int id);
 
+    String etatCommande(int id);
+
 }

@@ -15,6 +15,14 @@ public class Commande {
         this.nombreThe = nombreThe;
     }
 
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
+
+    public String getEtat() {
+        return  this.etat;
+    }
+
     public void ajouterThe(String nomThe, int nombre) {
         int index = listeThe.indexOf(nomThe);
         if (index == -1 && nombre > 0) {
