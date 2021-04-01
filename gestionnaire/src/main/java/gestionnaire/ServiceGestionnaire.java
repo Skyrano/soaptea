@@ -18,11 +18,19 @@ public interface ServiceGestionnaire {
 
     String etatCommande(int id);
 
-    int creerUtilisateur(String nom, String adresse);
+    int creerUtilisateur(String nom, String adresse, String mdp);
 
-    boolean modifierUtilisateur(int id, String nom, String adresse);
+    boolean modifierUtilisateur(int idutilisateur, String nom, String adresse, String mdp);
 
-    boolean supprimerUtilisateur(int id);
+    boolean supprimerUtilisateur(int idutilisateur);
+
+    boolean paiement(int idutilisateur, int montant, String numeroCarte);
+
+    int Connexion(String nom, String mdp);
 
     boolean majCarte(ArrayList<String> carte);
+
+    ArrayList<String> catalogue();
+
+    ArrayList<Integer> commandeUtilisateur(int idutilisateur);
 }
