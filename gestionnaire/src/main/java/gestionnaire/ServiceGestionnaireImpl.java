@@ -8,6 +8,7 @@ public class ServiceGestionnaireImpl implements ServiceGestionnaire {
 
     private ArrayList<Commande> commandes;
     private ArrayList<Utilisateur> utilisateurs;
+    private ArrayList<String> carte;
 
     @Override
     public boolean notifierCommande(Commande commande) {
@@ -86,6 +87,12 @@ public class ServiceGestionnaireImpl implements ServiceGestionnaire {
         if (utilisateur == null)
             return false;
         utilisateurs.remove(utilisateur);
+        return true;
+    }
+
+    @Override
+    public boolean majCarte(ArrayList<String> carte) {
+        this.carte = carte;
         return true;
     }
 

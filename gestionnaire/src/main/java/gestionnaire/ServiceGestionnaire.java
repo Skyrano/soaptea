@@ -1,6 +1,7 @@
 package gestionnaire;
 
 import javax.jws.WebService;
+import java.util.ArrayList;
 
 @WebService(name = "ServiceGestionnaire", targetNamespace = "http://ensibs.projet.fr/")
 public interface ServiceGestionnaire {
@@ -22,4 +23,6 @@ public interface ServiceGestionnaire {
     boolean modifierUtilisateur(int id, String nom, String adresse);
 
     boolean supprimerUtilisateur(int id);
+
+    boolean majCarte(ArrayList<String> carte);
 }
