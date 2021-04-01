@@ -117,8 +117,8 @@ public class ServiceGestionnaireImpl implements ServiceGestionnaire {
     }
 
     @Override
-    public ArrayList<Integer> commandeUtilisateur(int idutilisateur) {
-        return commandesUtilisateur(idutilisateur);
+    public ArrayList<Integer> commandesUtilisateur(int idutilisateur) {
+        return getcommandesUtilisateur(idutilisateur);
     }
 
     private Commande getCommande(int id) {
@@ -153,7 +153,7 @@ public class ServiceGestionnaireImpl implements ServiceGestionnaire {
         return false;
     }
 
-    private ArrayList<Integer> commandesUtilisateur(int idUtilisateur) {
+    private ArrayList<Integer> getcommandesUtilisateur(int idUtilisateur) {
         ArrayList<Integer> liste = new ArrayList<Integer>();
         for (Commande commande : commandes) {
             if (commande.getIdUtilisateur() == idUtilisateur)

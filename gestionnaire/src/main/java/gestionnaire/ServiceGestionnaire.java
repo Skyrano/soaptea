@@ -32,5 +32,5 @@ public interface ServiceGestionnaire {
 
     ArrayList<String> catalogue();
 
-    ArrayList<Integer> commandeUtilisateur(int idutilisateur);
+    ArrayList<Integer> commandesUtilisateur(int idutilisateur);
 }

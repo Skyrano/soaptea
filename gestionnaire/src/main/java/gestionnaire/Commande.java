@@ -1,20 +1,18 @@
 package gestionnaire;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Commande {
 
     private final int id;
     private final int idUtilisateur;
-    private ArrayList<String> listeThe;
-    private ArrayList<Integer> nombreThe;
+    private HashMap<String, Integer> listeThe;
     private String etat;
 
-    public Commande(int id, int idUtilisateur, ArrayList<String> listeThe, ArrayList<Integer> nombreThe) {
+    public Commande(int id, int idUtilisateur, HashMap<String, Integer> listeThe) {
         this.id = id;
         this.idUtilisateur = idUtilisateur;
         this.listeThe = listeThe;
-        this.nombreThe = nombreThe;
     }
 
     public void setEtat(String etat) {
@@ -26,45 +24,38 @@ public class Commande {
     }
 
     public void ajouterThe(String nomThe, int nombre) {
-        int index = listeThe.indexOf(nomThe);
-        if (index == -1 && nombre > 0) {
-            listeThe.add(nomThe);
-            nombreThe.add(1);
-        }
-        else {
-            nombreThe.set(index, nombreThe.get(index) + nombre);
+        if (nombre > 0) {
+            if (!listeThe.containsKey(nomThe)) {
+                listeThe.put(nomThe, nombre);
+            }
+            else {
+                listeThe.replace(nomThe, listeThe.get(nomThe) + nombre);
+            }
         }
     }
 
     public void supprimerThe(String nomThe, int nombre) {
-        int index = listeThe.indexOf(nomThe);
-        if (index != -1 && nombre >= 0) {
-            nombreThe.set(index, nombreThe.get(index) - nombre);
-            if (nombreThe.get(index) <= 0){
-                listeThe.remove(index);
-                nombreThe.remove(index);
+        if (listeThe.containsKey(nomThe)) {
+            if (listeThe.containsKey(nomThe) && nombre >= 0) {
+                listeThe.replace(nomThe, listeThe.get(nomThe) - nombre);
+                if (listeThe.get(nomThe) <= 0){
+                    listeThe.remove(nomThe);
+                }
             }
-        }
-        else if (index != -1 && nombre == -1) {
-            listeThe.remove(index);
-            nombreThe.remove(index);
+            else if (nombre == -1) {
+                listeThe.remove(nomThe);
+            }
         }
     }
 
     public void setNombreThe(String nomThe, int nombre) {
-        int index = listeThe.indexOf(nomThe);
-        if (index != -1 && nombre > 0) {
-            nombreThe.set(index, nombre);
-
+        if (listeThe.containsKey(nomThe) && nombre > 0) {
+            listeThe.replace(nomThe, nombre);
         }
     }
 
-    public ArrayList<String> getListeThe() {
+    public HashMap<String, Integer> getListeThe() {
         return listeThe;
-    }
-
-    public ArrayList<Integer> getNombreThe() {
-        return nombreThe;
     }
 
     public int getId() {
