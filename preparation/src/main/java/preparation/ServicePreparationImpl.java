@@ -1,32 +1,30 @@
 package preparation;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
-public class ServicePreparationImpl {
+public class ServicePreparationImpl implements ServicePreparation {
 
-    private void prendreNoteCommandeClient(){
-        System.out.println("La commande du client a été prise en compte ? (appuyez sur \"entré\" pour continuer) ...");
-        Scanner scanner = new Scanner(System.in);
-        String line = scanner.nextLine();
+    @Override
+    public boolean debutPreparation(int id, int idUtilisateur, HashMap<String, Integer> listeThe, String etat){
 
-        //envoie de l'info à la gestion
+        TeaProcess tea = new TeaProcess(id, idUtilisateur, listeThe, etat);
+
+        return true;
     }
 
-    private void deplacerTheZoneLivraison(){
-        System.out.println("Le thé à été déposé sur la zone du client ? (appuyez sur \"entré\" pour continuer) ...");
-        Scanner scanner = new Scanner(System.in);
-        String line = scanner.nextLine();
 
-        //envoie de l'info à la gestion
-    }
-
-    public void startProcessPreparation(){
-
-
-    }
 
     public static void main(String[] args) throws IOException {
-        TeaProcess tea = new TeaProcess();
+
+        HashMap<String, Integer> listeThe = new HashMap<>();
+        listeThe.put("The vert au citron", 5);
+        listeThe.put("The vert à la menthe", 2);
+        listeThe.put("The noir à la Marie-Jeanne", 25);
+
+
+        TeaProcess tea = new TeaProcess(1, 1, listeThe, "Debut");
     }
 }
