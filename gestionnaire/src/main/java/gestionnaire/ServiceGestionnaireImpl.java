@@ -4,7 +4,7 @@ import javax.jws.WebService;
 import java.util.ArrayList;
 
 @WebService(endpointInterface = "gestionnaire.ServiceGestionnaire", serviceName = "ServiceGestionnaire", portName = "GestionnairePort")
-public class ServiceGestionnaireImpl implements ServiceGestionnaire {
+public class ServiceGestionnaireImpl implements ServiceGestionnaire, ServiceGestionnaireClient {
 
     private ArrayList<Commande> commandes;
     private ArrayList<Utilisateur> utilisateurs;
@@ -121,6 +121,11 @@ public class ServiceGestionnaireImpl implements ServiceGestionnaire {
         return getcommandesUtilisateur(idutilisateur);
     }
 
+    @Override
+    public ArrayList<Integer> commandesPretesLivraison() {
+        return getcommandesPretes();
+    }
+
     private Commande getCommande(int id) {
         for (Commande commande : commandes) {
             if (commande.getId() == id)
@@ -157,6 +162,15 @@ public class ServiceGestionnaireImpl implements ServiceGestionnaire {
         ArrayList<Integer> liste = new ArrayList<Integer>();
         for (Commande commande : commandes) {
             if (commande.getIdUtilisateur() == idUtilisateur)
+                liste.add(commande.getId());
+        }
+        return liste;
+    }
+
+    private ArrayList<Integer> getcommandesPretes() {
+        ArrayList<Integer> liste = new ArrayList<Integer>();
+        for (Commande commande : commandes) {
+            if (commande.getEtat().equals("The prepare"))
                 liste.add(commande.getId());
         }
         return liste;
