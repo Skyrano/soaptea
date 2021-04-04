@@ -44,9 +44,6 @@ public class ServiceClientImpl implements ServiceClient {
             id = commandes.get(commandes.size()-1).getId()+1;
         Commande commande = new Commande(id,idUtilisateur, listeThe, "Commande creee");
         commandes.add(commande);
-        System.out.println(id);
-        System.out.println(idUtilisateur);
-        System.out.println(listeThe);
         return true;
     }
 
@@ -88,11 +85,9 @@ public class ServiceClientImpl implements ServiceClient {
     public ArrayList<Integer> commandesUtilisateur(int idutilisateur) {
         ArrayList<Integer> liste = new ArrayList<Integer>();
         for (Commande commande : gestionnaire.getCommandes()) {
-            System.out.println(commande.getIdUtilisateur());
             if (commande.getIdUtilisateur() == idutilisateur)
                 liste.add(commande.getId());
         }
-        System.out.println(liste);
         return liste;
     }
 

@@ -5,7 +5,6 @@ import server.ServiceGestionnaire;
 import javax.jws.WebService;
 import java.util.ArrayList;
 
-@WebService(endpointInterface = "server.ServiceGestionnaire", serviceName = "ServiceGestionnaire", portName = "GestionnairePort")
 public class ServiceGestionnaireImpl implements ServiceGestionnaire {
 
     private ArrayList<Commande> commandes;
