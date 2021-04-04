@@ -55,7 +55,7 @@
                             <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
                             <keep>true</keep>
                             <wsdlUrls>
-                                <wsdlUrl>http://localhost:9991/ws/ServicePreparation?wsdl</wsdlUrl>
+                                <wsdlUrl>http://localhost:9991/ws/preparation?wsdl</wsdlUrl>
                             </wsdlUrls>
                             <bindingFiles>
                                 <bindingFile>

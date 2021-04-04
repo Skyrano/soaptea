@@ -34,8 +34,8 @@ public class LivraisonProcess extends JFrame {
 
 
 
-        ServiceLivraison_Service livraisonService = new ServiceLivraison_Service();
-        ServiceLivraison livraisonPort = livraisonService.getLivraisonPort();
+        Livraison_Service livraisonService = new Livraison_Service();
+        Livraison livraisonPort = livraisonService.getLivraisonPort();
 
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(500, 300));

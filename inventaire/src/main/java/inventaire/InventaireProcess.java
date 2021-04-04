@@ -24,8 +24,8 @@ public class InventaireProcess extends JFrame {
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(500, 300));
 
-        ServiceInventaire_Service inventaireService = new ServiceInventaire_Service();
-        ServiceInventaire inventairePort = inventaireService.getInventairePort();
+        Inventaire_Service inventaireService = new Inventaire_Service();
+        Inventaire inventairePort = inventaireService.getInventairePort();
 
         String textInit = "Veuillez refaire la liste des thés :\n";
 

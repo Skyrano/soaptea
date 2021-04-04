@@ -32,8 +32,8 @@ public class TeaProcess extends JFrame {
         this.listeThe = listeThe;
         this.etat = etat;
 
-        ServicePreparation_Service preparationService = new ServicePreparation_Service();
-        ServicePreparation preparationPort = preparationService.getPreparationPort();
+        Preparation_Service preparationService = new Preparation_Service();
+        Preparation preparationPort = preparationService.getPreparationPort();
 
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(500, 300));
