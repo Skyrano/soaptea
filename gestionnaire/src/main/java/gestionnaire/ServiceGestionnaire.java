@@ -10,9 +10,9 @@ public interface ServiceGestionnaire {
 
     boolean thePrepare(int id);
 
-    boolean colisAuLivreur(int id);
-
     ArrayList<Integer> commandesPretesLivraison();
+
+    boolean colisAuLivreur(int id);
 
     boolean theLivre(int id);
 

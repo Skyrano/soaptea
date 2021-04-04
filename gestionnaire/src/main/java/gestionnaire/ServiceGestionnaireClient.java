@@ -6,9 +6,13 @@ import java.util.ArrayList;
 @WebService(name = "ServiceGestionnaireClient", targetNamespace = "http://ensibs.projet.fr/")
 public interface ServiceGestionnaireClient {
 
-    boolean notifierCommande(Commande commande);
+    ArrayList<String> catalogue();
 
-    String etatCommande(int id);
+    int Connexion(String nom, String mdp);
+
+    boolean paiement(int idutilisateur, int montant, String numeroCarte);
+
+    boolean notifierCommande(Commande commande);
 
     int creerUtilisateur(String nom, String adresse, String mdp);
 
@@ -16,12 +20,8 @@ public interface ServiceGestionnaireClient {
 
     boolean supprimerUtilisateur(int idutilisateur);
 
-    ArrayList<String> catalogue();
-
     ArrayList<Integer> commandesUtilisateur(int idutilisateur);
 
-    boolean paiement(int idutilisateur, int montant, String numeroCarte);
-
-    int Connexion(String nom, String mdp);
+    String etatCommande(int id);
 
 }
