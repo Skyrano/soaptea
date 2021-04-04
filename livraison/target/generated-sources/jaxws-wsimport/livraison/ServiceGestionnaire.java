@@ -30,594 +30,38 @@ public interface ServiceGestionnaire {
 
     /**
      * 
-     * @param arg3
-     * @param arg2
-     * @param arg1
-     * @param arg0
      * @return
-     *     returns javax.xml.ws.Response<livraison.ModifierUtilisateurResponse>
+     *     returns javax.xml.ws.Response<livraison.CommandesPretesLivraisonResponse>
      */
-    @WebMethod(operationName = "modifierUtilisateur")
-    @RequestWrapper(localName = "modifierUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ModifierUtilisateur")
-    @ResponseWrapper(localName = "modifierUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ModifierUtilisateurResponse")
-    public Response<ModifierUtilisateurResponse> modifierUtilisateurAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2,
-        @WebParam(name = "arg3", targetNamespace = "")
-        String arg3);
+    @WebMethod(operationName = "commandesPretesLivraison")
+    @RequestWrapper(localName = "commandesPretesLivraison", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandesPretesLivraison")
+    @ResponseWrapper(localName = "commandesPretesLivraisonResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandesPretesLivraisonResponse")
+    public Response<CommandesPretesLivraisonResponse> commandesPretesLivraisonAsync();
 
     /**
      * 
-     * @param arg3
-     * @param arg2
-     * @param arg1
-     * @param arg0
      * @param asyncHandler
      * @return
      *     returns java.util.concurrent.Future<? extends java.lang.Object>
      */
-    @WebMethod(operationName = "modifierUtilisateur")
-    @RequestWrapper(localName = "modifierUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ModifierUtilisateur")
-    @ResponseWrapper(localName = "modifierUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ModifierUtilisateurResponse")
-    public Future<?> modifierUtilisateurAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2,
-        @WebParam(name = "arg3", targetNamespace = "")
-        String arg3,
+    @WebMethod(operationName = "commandesPretesLivraison")
+    @RequestWrapper(localName = "commandesPretesLivraison", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandesPretesLivraison")
+    @ResponseWrapper(localName = "commandesPretesLivraisonResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandesPretesLivraisonResponse")
+    public Future<?> commandesPretesLivraisonAsync(
         @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<ModifierUtilisateurResponse> asyncHandler);
+        AsyncHandler<CommandesPretesLivraisonResponse> asyncHandler);
 
     /**
      * 
-     * @param arg3
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "modifierUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ModifierUtilisateur")
-    @ResponseWrapper(localName = "modifierUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ModifierUtilisateurResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/modifierUtilisateurRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/modifierUtilisateurResponse")
-    public boolean modifierUtilisateur(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2,
-        @WebParam(name = "arg3", targetNamespace = "")
-        String arg3);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.SupprimerUtilisateurResponse>
-     */
-    @WebMethod(operationName = "supprimerUtilisateur")
-    @RequestWrapper(localName = "supprimerUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.SupprimerUtilisateur")
-    @ResponseWrapper(localName = "supprimerUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.SupprimerUtilisateurResponse")
-    public Response<SupprimerUtilisateurResponse> supprimerUtilisateurAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "supprimerUtilisateur")
-    @RequestWrapper(localName = "supprimerUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.SupprimerUtilisateur")
-    @ResponseWrapper(localName = "supprimerUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.SupprimerUtilisateurResponse")
-    public Future<?> supprimerUtilisateurAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<SupprimerUtilisateurResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "supprimerUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.SupprimerUtilisateur")
-    @ResponseWrapper(localName = "supprimerUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.SupprimerUtilisateurResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/supprimerUtilisateurRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/supprimerUtilisateurResponse")
-    public boolean supprimerUtilisateur(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.CommandeUtilisateurResponse>
-     */
-    @WebMethod(operationName = "commandeUtilisateur")
-    @RequestWrapper(localName = "commandeUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandeUtilisateur")
-    @ResponseWrapper(localName = "commandeUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandeUtilisateurResponse")
-    public Response<CommandeUtilisateurResponse> commandeUtilisateurAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "commandeUtilisateur")
-    @RequestWrapper(localName = "commandeUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandeUtilisateur")
-    @ResponseWrapper(localName = "commandeUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandeUtilisateurResponse")
-    public Future<?> commandeUtilisateurAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<CommandeUtilisateurResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg0
      * @return
      *     returns java.util.List<java.lang.Integer>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "commandeUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandeUtilisateur")
-    @ResponseWrapper(localName = "commandeUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandeUtilisateurResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/commandeUtilisateurRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/commandeUtilisateurResponse")
-    public List<Integer> commandeUtilisateur(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.CreerUtilisateurResponse>
-     */
-    @WebMethod(operationName = "creerUtilisateur")
-    @RequestWrapper(localName = "creerUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CreerUtilisateur")
-    @ResponseWrapper(localName = "creerUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CreerUtilisateurResponse")
-    public Response<CreerUtilisateurResponse> creerUtilisateurAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "creerUtilisateur")
-    @RequestWrapper(localName = "creerUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CreerUtilisateur")
-    @ResponseWrapper(localName = "creerUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CreerUtilisateurResponse")
-    public Future<?> creerUtilisateurAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<CreerUtilisateurResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns int
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "creerUtilisateur", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CreerUtilisateur")
-    @ResponseWrapper(localName = "creerUtilisateurResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CreerUtilisateurResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/creerUtilisateurRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/creerUtilisateurResponse")
-    public int creerUtilisateur(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.MajCarteResponse>
-     */
-    @WebMethod(operationName = "majCarte")
-    @RequestWrapper(localName = "majCarte", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarte")
-    @ResponseWrapper(localName = "majCarteResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarteResponse")
-    public Response<MajCarteResponse> majCarteAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        List<String> arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "majCarte")
-    @RequestWrapper(localName = "majCarte", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarte")
-    @ResponseWrapper(localName = "majCarteResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarteResponse")
-    public Future<?> majCarteAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        List<String> arg0,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<MajCarteResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "majCarte", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarte")
-    @ResponseWrapper(localName = "majCarteResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarteResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/majCarteRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/majCarteResponse")
-    public boolean majCarte(
-        @WebParam(name = "arg0", targetNamespace = "")
-        List<String> arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.TheEnPreparationResponse>
-     */
-    @WebMethod(operationName = "theEnPreparation")
-    @RequestWrapper(localName = "theEnPreparation", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparation")
-    @ResponseWrapper(localName = "theEnPreparationResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparationResponse")
-    public Response<TheEnPreparationResponse> theEnPreparationAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "theEnPreparation")
-    @RequestWrapper(localName = "theEnPreparation", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparation")
-    @ResponseWrapper(localName = "theEnPreparationResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparationResponse")
-    public Future<?> theEnPreparationAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<TheEnPreparationResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "theEnPreparation", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparation")
-    @ResponseWrapper(localName = "theEnPreparationResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparationResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/theEnPreparationRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/theEnPreparationResponse")
-    public boolean theEnPreparation(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.ConnexionResponse>
-     */
-    @WebMethod(operationName = "Connexion")
-    @RequestWrapper(localName = "Connexion", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Connexion")
-    @ResponseWrapper(localName = "ConnexionResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ConnexionResponse")
-    public Response<ConnexionResponse> connexionAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "Connexion")
-    @RequestWrapper(localName = "Connexion", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Connexion")
-    @ResponseWrapper(localName = "ConnexionResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ConnexionResponse")
-    public Future<?> connexionAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<ConnexionResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns int
-     */
-    @WebMethod(operationName = "Connexion")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "Connexion", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Connexion")
-    @ResponseWrapper(localName = "ConnexionResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.ConnexionResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/ConnexionRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/ConnexionResponse")
-    public int connexion(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.PaiementResponse>
-     */
-    @WebMethod(operationName = "paiement")
-    @RequestWrapper(localName = "paiement", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Paiement")
-    @ResponseWrapper(localName = "paiementResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.PaiementResponse")
-    public Response<PaiementResponse> paiementAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "paiement")
-    @RequestWrapper(localName = "paiement", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Paiement")
-    @ResponseWrapper(localName = "paiementResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.PaiementResponse")
-    public Future<?> paiementAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<PaiementResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "paiement", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Paiement")
-    @ResponseWrapper(localName = "paiementResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.PaiementResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/paiementRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/paiementResponse")
-    public boolean paiement(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        String arg2);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.TheLivreResponse>
-     */
-    @WebMethod(operationName = "theLivre")
-    @RequestWrapper(localName = "theLivre", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivre")
-    @ResponseWrapper(localName = "theLivreResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivreResponse")
-    public Response<TheLivreResponse> theLivreAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "theLivre")
-    @RequestWrapper(localName = "theLivre", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivre")
-    @ResponseWrapper(localName = "theLivreResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivreResponse")
-    public Future<?> theLivreAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<TheLivreResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "theLivre", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivre")
-    @ResponseWrapper(localName = "theLivreResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivreResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/theLivreRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/theLivreResponse")
-    public boolean theLivre(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @return
-     *     returns javax.xml.ws.Response<livraison.CatalogueResponse>
-     */
-    @WebMethod(operationName = "catalogue")
-    @RequestWrapper(localName = "catalogue", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Catalogue")
-    @ResponseWrapper(localName = "catalogueResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CatalogueResponse")
-    public Response<CatalogueResponse> catalogueAsync();
-
-    /**
-     * 
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "catalogue")
-    @RequestWrapper(localName = "catalogue", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Catalogue")
-    @ResponseWrapper(localName = "catalogueResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CatalogueResponse")
-    public Future<?> catalogueAsync(
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<CatalogueResponse> asyncHandler);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<java.lang.String>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "catalogue", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.Catalogue")
-    @ResponseWrapper(localName = "catalogueResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CatalogueResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/catalogueRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/catalogueResponse")
-    public List<String> catalogue();
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.EtatCommandeResponse>
-     */
-    @WebMethod(operationName = "etatCommande")
-    @RequestWrapper(localName = "etatCommande", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.EtatCommande")
-    @ResponseWrapper(localName = "etatCommandeResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.EtatCommandeResponse")
-    public Response<EtatCommandeResponse> etatCommandeAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "etatCommande")
-    @RequestWrapper(localName = "etatCommande", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.EtatCommande")
-    @ResponseWrapper(localName = "etatCommandeResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.EtatCommandeResponse")
-    public Future<?> etatCommandeAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<EtatCommandeResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "etatCommande", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.EtatCommande")
-    @ResponseWrapper(localName = "etatCommandeResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.EtatCommandeResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/etatCommandeRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/etatCommandeResponse")
-    public String etatCommande(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns javax.xml.ws.Response<livraison.NotifierCommandeResponse>
-     */
-    @WebMethod(operationName = "notifierCommande")
-    @RequestWrapper(localName = "notifierCommande", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.NotifierCommande")
-    @ResponseWrapper(localName = "notifierCommandeResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.NotifierCommandeResponse")
-    public Response<NotifierCommandeResponse> notifierCommandeAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Commande arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @param asyncHandler
-     * @return
-     *     returns java.util.concurrent.Future<? extends java.lang.Object>
-     */
-    @WebMethod(operationName = "notifierCommande")
-    @RequestWrapper(localName = "notifierCommande", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.NotifierCommande")
-    @ResponseWrapper(localName = "notifierCommandeResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.NotifierCommandeResponse")
-    public Future<?> notifierCommandeAsync(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Commande arg0,
-        @WebParam(name = "asyncHandler", targetNamespace = "")
-        AsyncHandler<NotifierCommandeResponse> asyncHandler);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "notifierCommande", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.NotifierCommande")
-    @ResponseWrapper(localName = "notifierCommandeResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.NotifierCommandeResponse")
-    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/notifierCommandeRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/notifierCommandeResponse")
-    public boolean notifierCommande(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Commande arg0);
+    @RequestWrapper(localName = "commandesPretesLivraison", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandesPretesLivraison")
+    @ResponseWrapper(localName = "commandesPretesLivraisonResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.CommandesPretesLivraisonResponse")
+    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/commandesPretesLivraisonRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/commandesPretesLivraisonResponse")
+    public List<Integer> commandesPretesLivraison();
 
     /**
      * 
@@ -667,6 +111,94 @@ public interface ServiceGestionnaire {
      * 
      * @param arg0
      * @return
+     *     returns javax.xml.ws.Response<livraison.TheEnPreparationResponse>
+     */
+    @WebMethod(operationName = "theEnPreparation")
+    @RequestWrapper(localName = "theEnPreparation", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparation")
+    @ResponseWrapper(localName = "theEnPreparationResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparationResponse")
+    public Response<TheEnPreparationResponse> theEnPreparationAsync(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "theEnPreparation")
+    @RequestWrapper(localName = "theEnPreparation", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparation")
+    @ResponseWrapper(localName = "theEnPreparationResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparationResponse")
+    public Future<?> theEnPreparationAsync(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0,
+        @WebParam(name = "asyncHandler", targetNamespace = "")
+        AsyncHandler<TheEnPreparationResponse> asyncHandler);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "theEnPreparation", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparation")
+    @ResponseWrapper(localName = "theEnPreparationResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheEnPreparationResponse")
+    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/theEnPreparationRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/theEnPreparationResponse")
+    public boolean theEnPreparation(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns javax.xml.ws.Response<livraison.TheLivreResponse>
+     */
+    @WebMethod(operationName = "theLivre")
+    @RequestWrapper(localName = "theLivre", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivre")
+    @ResponseWrapper(localName = "theLivreResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivreResponse")
+    public Response<TheLivreResponse> theLivreAsync(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "theLivre")
+    @RequestWrapper(localName = "theLivre", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivre")
+    @ResponseWrapper(localName = "theLivreResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivreResponse")
+    public Future<?> theLivreAsync(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0,
+        @WebParam(name = "asyncHandler", targetNamespace = "")
+        AsyncHandler<TheLivreResponse> asyncHandler);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "theLivre", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivre")
+    @ResponseWrapper(localName = "theLivreResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.TheLivreResponse")
+    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/theLivreRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/theLivreResponse")
+    public boolean theLivre(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
      *     returns javax.xml.ws.Response<livraison.ColisAuLivreurResponse>
      */
     @WebMethod(operationName = "colisAuLivreur")
@@ -706,5 +238,49 @@ public interface ServiceGestionnaire {
     public boolean colisAuLivreur(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns javax.xml.ws.Response<livraison.MajCarteResponse>
+     */
+    @WebMethod(operationName = "majCarte")
+    @RequestWrapper(localName = "majCarte", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarte")
+    @ResponseWrapper(localName = "majCarteResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarteResponse")
+    public Response<MajCarteResponse> majCarteAsync(
+        @WebParam(name = "arg0", targetNamespace = "")
+        List<String> arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @param asyncHandler
+     * @return
+     *     returns java.util.concurrent.Future<? extends java.lang.Object>
+     */
+    @WebMethod(operationName = "majCarte")
+    @RequestWrapper(localName = "majCarte", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarte")
+    @ResponseWrapper(localName = "majCarteResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarteResponse")
+    public Future<?> majCarteAsync(
+        @WebParam(name = "arg0", targetNamespace = "")
+        List<String> arg0,
+        @WebParam(name = "asyncHandler", targetNamespace = "")
+        AsyncHandler<MajCarteResponse> asyncHandler);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "majCarte", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarte")
+    @ResponseWrapper(localName = "majCarteResponse", targetNamespace = "http://ensibs.projet.fr/", className = "livraison.MajCarteResponse")
+    @Action(input = "http://ensibs.projet.fr/ServiceGestionnaire/majCarteRequest", output = "http://ensibs.projet.fr/ServiceGestionnaire/majCarteResponse")
+    public boolean majCarte(
+        @WebParam(name = "arg0", targetNamespace = "")
+        List<String> arg0);
 
 }

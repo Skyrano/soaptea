@@ -1,34 +1,17 @@
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\Catalogue.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\TheEnPreparationResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ThePrepareResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ThePrepare.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\CommandeUtilisateurResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\CommandeUtilisateur.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ModifierUtilisateurResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\package-info.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\CatalogueResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\CreerUtilisateur.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ObjectFactory.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ServiceGestionnaire.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\SupprimerUtilisateur.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ColisAuLivreurResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\Paiement.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\src\main\java\inventaire\ServiceInventaire.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\MajCarte.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\SupprimerUtilisateurResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\EtatCommande.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\PaiementResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\Connexion.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ServiceGestionnaire_Service.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\EtatCommandeResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ModifierUtilisateur.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\TheLivre.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ConnexionResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\NotifierCommande.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ColisAuLivreur.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\CreerUtilisateurResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\MajCarteResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\Commande.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\TheEnPreparation.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\TheLivreResponse.java
-D:\Travail\Architectures Orientées Services\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\NotifierCommandeResponse.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\TheLivre.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\package-info.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\MajCarteResponse.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\TheEnPreparationResponse.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ThePrepare.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\TheLivreResponse.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\src\main\java\inventaire\ServiceInventaire.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\TheEnPreparation.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\CommandesPretesLivraison.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ThePrepareResponse.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ColisAuLivreur.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ServiceGestionnaire_Service.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ColisAuLivreurResponse.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\CommandesPretesLivraisonResponse.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\MajCarte.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ObjectFactory.java
+C:\Users\Yoann\Documents\ENSIBS\Annee2\Semestre 4\Architecture Orientes service\Projet\soaptea\inventaire\target\generated-sources\jaxws-wsimport\inventaire\ServiceGestionnaire.java
