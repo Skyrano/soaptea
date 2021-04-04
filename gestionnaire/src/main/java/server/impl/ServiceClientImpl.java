@@ -23,7 +23,11 @@ public class ServiceClientImpl implements ServiceClient {
 
     @Override
     public int Connexion(String nom, String mdp) {
-        return getIdUtilisateur(nom, mdp);
+        for (Utilisateur utilisateur : gestionnaire.getUtilisateurs()) {
+            if (utilisateur.getNom().equals(nom) && utilisateur.getMdp().equals(mdp))
+                return utilisateur.getId();
+        }
+        return -1;
     }
 
     @Override
@@ -39,10 +43,6 @@ public class ServiceClientImpl implements ServiceClient {
         if (commandes.size() > 0)
             id = commandes.get(commandes.size()-1).getId()+1;
         Commande commande = new Commande(id,idUtilisateur, listeThe, "Commande creee");
-        //commande.setId(id);
-        //commande.setIdUtilisateur(idUtilisateur);
-        //commande.setListeThe(listeThe);
-        //commande.setEtat("Commande creee");
         commandes.add(commande);
         return true;
     }
@@ -83,7 +83,12 @@ public class ServiceClientImpl implements ServiceClient {
 
     @Override
     public ArrayList<Integer> commandesUtilisateur(int idutilisateur) {
-        return getcommandesUtilisateur(idutilisateur);
+        ArrayList<Integer> liste = new ArrayList<Integer>();
+        for (Commande commande : gestionnaire.getCommandes()) {
+            if (commande.getIdUtilisateur() == idutilisateur)
+                liste.add(commande.getId());
+        }
+        return liste;
     }
 
     @Override
@@ -99,24 +104,7 @@ public class ServiceClientImpl implements ServiceClient {
             if (utilisateur.getId() == idutilisateur)
                 return  utilisateur;
         }
-        return  null;
-    }
-
-    private int getIdUtilisateur(String nom, String mdp) {
-        for (Utilisateur utilisateur : gestionnaire.getUtilisateurs()) {
-            if (utilisateur.getNom().equals(nom) && utilisateur.getMdp().equals(mdp))
-                return utilisateur.getId();
-        }
-        return -1;
-    }
-
-    private boolean lastidInCommandes(int id) {
-        id = 0;
-        for (Commande commande : gestionnaire.getCommandes()) {
-            if (commande.getId() == id)
-                return true;
-        }
-        return false;
+        return null;
     }
 
     private Commande getCommande(int id) {
@@ -125,14 +113,5 @@ public class ServiceClientImpl implements ServiceClient {
                 return  commande;
         }
         return null;
-    }
-
-    private ArrayList<Integer> getcommandesUtilisateur(int idUtilisateur) {
-        ArrayList<Integer> liste = new ArrayList<Integer>();
-        for (Commande commande : gestionnaire.getCommandes()) {
-            if (commande.getIdUtilisateur() == idUtilisateur)
-                liste.add(commande.getId());
-        }
-        return liste;
     }
 }

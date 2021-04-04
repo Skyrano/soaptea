@@ -67,17 +67,6 @@ public class Commande {
         return idUtilisateur;
     }
 
-    /*
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setIdUtilisateur(int idUtilisateur) {
-        this.idUtilisateur = idUtilisateur;
-    }
-
-     */
-
     public void setListeThe(HashMap<String, Integer> listeThe) {
         this.listeThe = listeThe;
     }
