@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 @WebService(name = "ServicePreparation", targetNamespace = "http://ensibs.projet.fr/")
-public interface ServicePreparation {
+public interface ServicePreparationCallBack {
 
     public boolean debutPreparation(int id, int idUtilisateur, HashMap<String, Integer> listeThe, String etat);
 

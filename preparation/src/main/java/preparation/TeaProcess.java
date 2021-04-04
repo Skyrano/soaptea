@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
-import javax.swing.Timer;
 
 public class TeaProcess extends JFrame {
 
@@ -35,8 +34,8 @@ public class TeaProcess extends JFrame {
 
 
 
-        ServiceGestionnaire_Service gestionnaireService = new ServiceGestionnaire_Service();
-        ServiceGestionnaire gestionnairePort = gestionnaireService.getGestionnairePort();
+        ServicePreparation_Service gestionnaireService = new ServicePreparation_Service();
+        ServicePreparation gestionnairePort = gestionnaireService.getPreparationPort();
 
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(500, 300));

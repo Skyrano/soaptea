@@ -1,13 +1,10 @@
 package preparation;
 
 import javax.jws.WebService;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
 
-@WebService(endpointInterface = "preparation.ServicePreparation", serviceName = "ServicePreparation", portName = "PreparationPort")
-public class ServicePreparationImpl implements ServicePreparation {
+@WebService(endpointInterface = "preparation.ServicePreparationCallBack", serviceName = "ServicePreparation", portName = "PreparationPort")
+public class ServicePreparationCallBackImpl implements ServicePreparationCallBack {
 
     @Override
     public boolean debutPreparation(int id, int idUtilisateur, HashMap<String, Integer> listeThe, String etat){
