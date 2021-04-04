@@ -3,7 +3,7 @@ package preparation;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class startProcessMock {
+public class startPreparationMock {
 
     public static void main(String[] args) throws IOException {
 

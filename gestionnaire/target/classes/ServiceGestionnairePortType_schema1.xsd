@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ensibs.projet.fr/" xmlns:tns="http://ensibs.projet.fr/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="colisAuLivreur" type="tns:colisAuLivreur"/>
+
+  <xs:element name="colisAuLivreurResponse" type="tns:colisAuLivreurResponse"/>
+
+  <xs:element name="commandesPretesLivraison" type="tns:commandesPretesLivraison"/>
+
+  <xs:element name="commandesPretesLivraisonResponse" type="tns:commandesPretesLivraisonResponse"/>
+
+  <xs:element name="majCarte" type="tns:majCarte"/>
+
+  <xs:element name="majCarteResponse" type="tns:majCarteResponse"/>
+
+  <xs:element name="theEnPreparation" type="tns:theEnPreparation"/>
+
+  <xs:element name="theEnPreparationResponse" type="tns:theEnPreparationResponse"/>
+
+  <xs:element name="theLivre" type="tns:theLivre"/>
+
+  <xs:element name="theLivreResponse" type="tns:theLivreResponse"/>
+
+  <xs:element name="thePrepare" type="tns:thePrepare"/>
+
+  <xs:element name="thePrepareResponse" type="tns:thePrepareResponse"/>
+
+  <xs:complexType name="majCarte">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="majCarteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="theLivre">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="theLivreResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="theEnPreparation">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="theEnPreparationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="commandesPretesLivraison">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="commandesPretesLivraisonResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="thePrepare">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="thePrepareResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="colisAuLivreur">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="colisAuLivreurResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
