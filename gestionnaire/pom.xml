@@ -52,7 +52,7 @@
                             <goal>wsgen</goal>
                         </goals>
                         <configuration>
-                            <sei>gestionnaire.ServiceGestionnaireImpl</sei>
+                            <sei>server.impl.ServiceGestionnaireImpl</sei>
                             <genWsdl>true</genWsdl>
                             <keep>true</keep>
                         </configuration>
@@ -63,7 +63,7 @@
                             <goal>wsimport</goal>
                         </goals>
                         <configuration>
-                            <packageName>gestionnaire</packageName>
+                            <packageName>server</packageName>
                             <sourceDestDir>${project.build.directory}/generated-sources/jaxws-wsimport</sourceDestDir>
                             <keep>true</keep>
                             <wsdlUrls>
