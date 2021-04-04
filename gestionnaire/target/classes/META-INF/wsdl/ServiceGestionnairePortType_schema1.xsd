@@ -1,49 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema version="1.0" targetNamespace="http://ensibs.projet.fr/" xmlns:tns="http://ensibs.projet.fr/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <xs:element name="Connexion" type="tns:Connexion"/>
-
-  <xs:element name="ConnexionResponse" type="tns:ConnexionResponse"/>
-
-  <xs:element name="catalogue" type="tns:catalogue"/>
-
-  <xs:element name="catalogueResponse" type="tns:catalogueResponse"/>
-
   <xs:element name="colisAuLivreur" type="tns:colisAuLivreur"/>
 
   <xs:element name="colisAuLivreurResponse" type="tns:colisAuLivreurResponse"/>
 
-  <xs:element name="commandeUtilisateur" type="tns:commandeUtilisateur"/>
+  <xs:element name="commandesPretesLivraison" type="tns:commandesPretesLivraison"/>
 
-  <xs:element name="commandeUtilisateurResponse" type="tns:commandeUtilisateurResponse"/>
-
-  <xs:element name="creerUtilisateur" type="tns:creerUtilisateur"/>
-
-  <xs:element name="creerUtilisateurResponse" type="tns:creerUtilisateurResponse"/>
-
-  <xs:element name="etatCommande" type="tns:etatCommande"/>
-
-  <xs:element name="etatCommandeResponse" type="tns:etatCommandeResponse"/>
+  <xs:element name="commandesPretesLivraisonResponse" type="tns:commandesPretesLivraisonResponse"/>
 
   <xs:element name="majCarte" type="tns:majCarte"/>
 
   <xs:element name="majCarteResponse" type="tns:majCarteResponse"/>
-
-  <xs:element name="modifierUtilisateur" type="tns:modifierUtilisateur"/>
-
-  <xs:element name="modifierUtilisateurResponse" type="tns:modifierUtilisateurResponse"/>
-
-  <xs:element name="notifierCommande" type="tns:notifierCommande"/>
-
-  <xs:element name="notifierCommandeResponse" type="tns:notifierCommandeResponse"/>
-
-  <xs:element name="paiement" type="tns:paiement"/>
-
-  <xs:element name="paiementResponse" type="tns:paiementResponse"/>
-
-  <xs:element name="supprimerUtilisateur" type="tns:supprimerUtilisateur"/>
-
-  <xs:element name="supprimerUtilisateurResponse" type="tns:supprimerUtilisateurResponse"/>
 
   <xs:element name="theEnPreparation" type="tns:theEnPreparation"/>
 
@@ -56,113 +24,6 @@
   <xs:element name="thePrepare" type="tns:thePrepare"/>
 
   <xs:element name="thePrepareResponse" type="tns:thePrepareResponse"/>
-
-  <xs:complexType name="modifierUtilisateur">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:int"/>
-      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
-      <xs:element name="arg2" type="xs:string" minOccurs="0"/>
-      <xs:element name="arg3" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="modifierUtilisateurResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="commandeUtilisateur">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:int"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="commandeUtilisateurResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="etatCommande">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:int"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="etatCommandeResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="notifierCommande">
-    <xs:sequence>
-      <xs:element name="arg0" type="tns:commande" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="commande">
-    <xs:sequence>
-      <xs:element name="etat" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="notifierCommandeResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="supprimerUtilisateur">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:int"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="supprimerUtilisateurResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="paiement">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:int"/>
-      <xs:element name="arg1" type="xs:int"/>
-      <xs:element name="arg2" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="paiementResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:boolean"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="creerUtilisateur">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
-      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
-      <xs:element name="arg2" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="creerUtilisateurResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="catalogue">
-    <xs:sequence/>
-  </xs:complexType>
-
-  <xs:complexType name="catalogueResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
 
   <xs:complexType name="majCarte">
     <xs:sequence>
@@ -200,6 +61,16 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="commandesPretesLivraison">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="commandesPretesLivraisonResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="thePrepare">
     <xs:sequence>
       <xs:element name="arg0" type="xs:int"/>
@@ -209,19 +80,6 @@
   <xs:complexType name="thePrepareResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="Connexion">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
-      <xs:element name="arg1" type="xs:string" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType name="ConnexionResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int"/>
     </xs:sequence>
   </xs:complexType>
 

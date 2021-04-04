@@ -1,10 +1,12 @@
 package preparation;
 
+import javax.jws.WebService;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+@WebService(endpointInterface = "preparation.ServicePreparation", serviceName = "ServicePreparation", portName = "PreparationPort")
 public class ServicePreparationImpl implements ServicePreparation {
 
     @Override

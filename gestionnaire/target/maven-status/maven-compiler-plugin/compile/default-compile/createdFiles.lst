@@ -1,5 +1,14 @@
-gestionnaire\ServiceGestionnairePublisher.class
-gestionnaire\ServiceGestionnaireImpl.class
 gestionnaire\ServiceGestionnaire.class
+gestionnaire\ServicePreparation_Service.class
+gestionnaire\DebutPreparation$Arg2$Entry.class
+gestionnaire\DebutPreparation.class
+gestionnaire\ServiceGestionnaireImpl.class
+gestionnaire\package-info.class
+gestionnaire\DebutPreparationResponse.class
+gestionnaire\ObjectFactory.class
+gestionnaire\DebutPreparation$Arg2.class
+gestionnaire\ServicePreparation.class
 gestionnaire\Commande.class
+gestionnaire\ServiceGestionnaireClient.class
+gestionnaire\ServiceGestionnairePublisher.class
 gestionnaire\Utilisateur.class
