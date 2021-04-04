@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+    <endpoint
+            name='client'
+            implementation='server.impl.ServiceClientImpl'
+            url-pattern='/client'/>
+    <endpoint
+            name='inventaire'
+            implementation='server.impl.ServiceInventaireImpl'
+            url-pattern='/inventaire'/>
+    <endpoint
+            name='livraison'
+            implementation='server.impl.ServiceLivraisonImpl'
+            url-pattern='/livraison'/>
+    <endpoint
+            name='preparation'
+            implementation='server.impl.ServicePreparationImpl'
+            url-pattern='/preparation'/>
+</endpoints>

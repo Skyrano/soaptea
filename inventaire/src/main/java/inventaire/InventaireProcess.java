@@ -24,8 +24,8 @@ public class InventaireProcess extends JFrame {
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(500, 300));
 
-        ServiceGestionnaire_Service gestionnaireService = new ServiceGestionnaire_Service();
-        ServiceGestionnaire gestionnairePort = gestionnaireService.getGestionnairePort();
+        ServiceInventaire_Service inventaireService = new ServiceInventaire_Service();
+        ServiceInventaire inventairePort = inventaireService.getInventairePort();
 
         String textInit = "Veuillez refaire la liste des thés :\n";
 
@@ -68,7 +68,7 @@ public class InventaireProcess extends JFrame {
                         listeThe.remove(i);
                     }
                 }
-                Response res = gestionnairePort.majCarteAsync(listeThe);
+                Response res = inventairePort.majCarteAsync(listeThe);
                 textArea.setText("Envoie des informations au gestionnaire ...\n");
                 MajCarteResponse reponse = null;
                 try {

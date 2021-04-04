@@ -1,29 +1,22 @@
 package server.impl;
 
 import server.ServiceClient;
-import server.ServiceGestionnaire;
 
 import javax.jws.WebService;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-@WebService(endpointInterface = "server.ServiceClient", serviceName = "ServiceClient", portName = "ClientPort")
+@WebService(endpointInterface = "server.ServiceClient", serviceName = "client", portName = "clientPort")
 public class ServiceClientImpl implements ServiceClient {
-
-    private ServiceGestionnaire gestionnaire;
-
-    public void setGestionnaire(ServiceGestionnaire gestionnaire) {
-        this.gestionnaire = gestionnaire;
-    }
 
     @Override
     public ArrayList<String> catalogue() {
-        return gestionnaire.getCarte();
+        return Gestionnaire.getCarte();
     }
 
     @Override
     public int Connexion(String nom, String mdp) {
-        for (Utilisateur utilisateur : gestionnaire.getUtilisateurs()) {
+        for (Utilisateur utilisateur : Gestionnaire.getUtilisateurs()) {
             if (utilisateur.getNom().equals(nom) && utilisateur.getMdp().equals(mdp))
                 return utilisateur.getId();
         }
@@ -39,7 +32,7 @@ public class ServiceClientImpl implements ServiceClient {
     @Override
     public boolean notifierCommande(int idUtilisateur, HashMap<String, Integer> listeThe) {
         int id = 0;
-        ArrayList<Commande> commandes = gestionnaire.getCommandes();
+        ArrayList<Commande> commandes = Gestionnaire.getCommandes();
         if (commandes.size() > 0)
             id = commandes.get(commandes.size()-1).getId()+1;
         Commande commande = new Commande(id,idUtilisateur, listeThe, "Commande creee");
@@ -50,7 +43,7 @@ public class ServiceClientImpl implements ServiceClient {
     @Override
     public int creerUtilisateur(String nom, String adresse, String mdp) {
         int id = 0;
-        ArrayList<Utilisateur> utilisateurs = gestionnaire.getUtilisateurs();
+        ArrayList<Utilisateur> utilisateurs = Gestionnaire.getUtilisateurs();
         if (utilisateurs.size() > 0)
             id = utilisateurs.get(utilisateurs.size()-1).getId()+1;
         Utilisateur utilisateur = new Utilisateur(id, nom, adresse, mdp);
@@ -77,14 +70,14 @@ public class ServiceClientImpl implements ServiceClient {
         Utilisateur utilisateur = getUtilisateur(idutilisateur);
         if (utilisateur == null)
             return false;
-        gestionnaire.getUtilisateurs().remove(utilisateur);
+        Gestionnaire.getUtilisateurs().remove(utilisateur);
         return true;
     }
 
     @Override
     public ArrayList<Integer> commandesUtilisateur(int idutilisateur) {
         ArrayList<Integer> liste = new ArrayList<Integer>();
-        for (Commande commande : gestionnaire.getCommandes()) {
+        for (Commande commande : Gestionnaire.getCommandes()) {
             if (commande.getIdUtilisateur() == idutilisateur)
                 liste.add(commande.getId());
         }
@@ -100,7 +93,7 @@ public class ServiceClientImpl implements ServiceClient {
     }
 
     private Utilisateur getUtilisateur(int idutilisateur) {
-        for (Utilisateur utilisateur : gestionnaire.getUtilisateurs()) {
+        for (Utilisateur utilisateur : Gestionnaire.getUtilisateurs()) {
             if (utilisateur.getId() == idutilisateur)
                 return  utilisateur;
         }
@@ -108,7 +101,7 @@ public class ServiceClientImpl implements ServiceClient {
     }
 
     private Commande getCommande(int id) {
-        for (Commande commande : gestionnaire.getCommandes()) {
+        for (Commande commande : Gestionnaire.getCommandes()) {
             if (commande.getId() == id)
                 return  commande;
         }

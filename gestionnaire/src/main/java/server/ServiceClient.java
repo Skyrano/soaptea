@@ -4,7 +4,7 @@ import javax.jws.WebService;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-@WebService(name = "ServiceClient", targetNamespace = "http://ensibs.projet.fr/")
+@WebService(name = "client", targetNamespace = "http://ensibs.projet.fr/")
 public interface ServiceClient {
 
     ArrayList<String> catalogue();

@@ -1,18 +1,11 @@
 package server.impl;
 
-import server.ServiceGestionnaire;
 import server.ServicePreparation;
 
 import javax.jws.WebService;
 
-@WebService(endpointInterface = "server.ServicePreparation", serviceName = "ServicePreparation", portName = "PreparationPort")
+@WebService(endpointInterface = "server.ServicePreparation", serviceName = "preparation", portName = "preparationPort")
 public class ServicePreparationImpl implements ServicePreparation {
-
-    private ServiceGestionnaire gestionnaire;
-
-    public void setGestionnaire(ServiceGestionnaire gestionnaire) {
-        this.gestionnaire = gestionnaire;
-    }
 
     @Override
     public boolean theEnPreparation(int id) {
@@ -33,7 +26,7 @@ public class ServicePreparationImpl implements ServicePreparation {
     }
 
     private Commande getCommande(int id) {
-        for (Commande commande : gestionnaire.getCommandes()) {
+        for (Commande commande : Gestionnaire.getCommandes()) {
             if (commande.getId() == id)
                 return  commande;
         }

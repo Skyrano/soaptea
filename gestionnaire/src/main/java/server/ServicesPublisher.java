@@ -7,24 +7,10 @@ import javax.xml.ws.Endpoint;
 public class ServicesPublisher {
 
     public static void main(String[] args) throws ClassNotFoundException {
-        ServiceGestionnaireImpl gestionnaire =  new ServiceGestionnaireImpl();
-
-        ServiceClientImpl client = new ServiceClientImpl();
-        client.setGestionnaire(gestionnaire);
-
-        ServiceInventaireImpl inventaire = new ServiceInventaireImpl();
-        inventaire.setGestionnaire(gestionnaire);
-
-        ServiceLivraisonImpl livraison = new ServiceLivraisonImpl();
-        livraison.setGestionnaire(gestionnaire);
-
-        ServicePreparationImpl preparation = new ServicePreparationImpl();
-        preparation.setGestionnaire(gestionnaire);
-
-        Endpoint.publish("http://localhost:9991/ws/ServiceClient", client);
-        Endpoint.publish("http://localhost:9991/ws/ServiceInventaire", inventaire);
-        Endpoint.publish("http://localhost:9991/ws/ServiceLivraison", livraison);
-        Endpoint.publish("http://localhost:9991/ws/ServicePreparation", preparation);
+        Endpoint.publish("http://localhost:9991/ws/client", new ServiceClientImpl());
+        Endpoint.publish("http://localhost:9991/ws/inventaire", new ServiceInventaireImpl());
+        Endpoint.publish("http://localhost:9991/ws/livraison", new ServiceLivraisonImpl());
+        Endpoint.publish("http://localhost:9991/ws/preparation", new ServicePreparationImpl());
     }
 
 }

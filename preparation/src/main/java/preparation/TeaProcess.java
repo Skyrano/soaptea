@@ -32,10 +32,8 @@ public class TeaProcess extends JFrame {
         this.listeThe = listeThe;
         this.etat = etat;
 
-
-
-        ServicePreparation_Service gestionnaireService = new ServicePreparation_Service();
-        ServicePreparation gestionnairePort = gestionnaireService.getPreparationPort();
+        ServicePreparation_Service preparationService = new ServicePreparation_Service();
+        ServicePreparation preparationPort = preparationService.getPreparationPort();
 
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(500, 300));
@@ -84,7 +82,7 @@ public class TeaProcess extends JFrame {
 
                 prepaCommence.setEnabled(false);
 
-                Response res = gestionnairePort.theEnPreparationAsync(id);
+                Response res = preparationPort.theEnPreparationAsync(id);
                 textArea.setText("Envoie des informations au gestionnaire ...\n");
                 TheEnPreparationResponse reponse = null;
                 try {
@@ -121,7 +119,7 @@ public class TeaProcess extends JFrame {
 
                 theLivre.setEnabled(false);
 
-                Response res = gestionnairePort.theEnPreparationAsync(id);
+                Response res = preparationPort.theEnPreparationAsync(id);
                 textArea.setText("Envoie des informations au gestionnaire ...\n");
                 TheEnPreparationResponse reponse = null;
                 try {

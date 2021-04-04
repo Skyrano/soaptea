@@ -3,7 +3,7 @@ package server;
 import javax.jws.WebService;
 import java.util.ArrayList;
 
-@WebService(name = "ServiceLivraison", targetNamespace = "http://ensibs.projet.fr/")
+@WebService(name = "livraison", targetNamespace = "http://ensibs.projet.fr/")
 public interface ServiceLivraison {
 
     ArrayList<Integer> commandesPretesLivraison();

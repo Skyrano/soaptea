@@ -34,8 +34,8 @@ public class LivraisonProcess extends JFrame {
 
 
 
-        ServiceGestionnaire_Service gestionnaireService = new ServiceGestionnaire_Service();
-        ServiceGestionnaire gestionnairePort = gestionnaireService.getGestionnairePort();
+        ServiceLivraison_Service livraisonService = new ServiceLivraison_Service();
+        ServiceLivraison livraisonPort = livraisonService.getLivraisonPort();
 
         this.setLayout(new BorderLayout());
         this.setPreferredSize(new Dimension(500, 300));
@@ -83,11 +83,11 @@ public class LivraisonProcess extends JFrame {
 
                 theRecupere.setEnabled(false);
 
-                Response res = gestionnairePort.theEnPreparationAsync(id);
+                Response res = livraisonPort.colisAuLivreurAsync(id);
                 textArea.setText("Envoie des informations au gestionnaire ...\n");
-                TheEnPreparationResponse reponse = null;
+                ColisAuLivreurResponse reponse = null;
                 try {
-                    reponse = (TheEnPreparationResponse)res.get();
+                    reponse = (ColisAuLivreurResponse)res.get();
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 } catch (ExecutionException executionException) {
@@ -122,11 +122,11 @@ public class LivraisonProcess extends JFrame {
 
                 theLivre.setEnabled(false);
 
-                Response res = gestionnairePort.theEnPreparationAsync(id);
+                Response res = livraisonPort.theLivreAsync(id);
                 textArea.setText("Envoie des informations au gestionnaire ...\n");
-                TheEnPreparationResponse reponse = null;
+                TheLivreResponse reponse = null;
                 try {
-                    reponse = (TheEnPreparationResponse)res.get();
+                    reponse = (TheLivreResponse)res.get();
                 } catch (InterruptedException interruptedException) {
                     interruptedException.printStackTrace();
                 } catch (ExecutionException executionException) {
