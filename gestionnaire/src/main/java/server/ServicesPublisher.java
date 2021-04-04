@@ -21,7 +21,6 @@ public class ServicesPublisher {
         ServicePreparationImpl preparation = new ServicePreparationImpl();
         preparation.setGestionnaire(gestionnaire);
 
-        Endpoint.publish("http://localhost:9991/ws/ServiceGestionnaire", gestionnaire);
         Endpoint.publish("http://localhost:9991/ws/ServiceClient", client);
         Endpoint.publish("http://localhost:9991/ws/ServiceInventaire", inventaire);
         Endpoint.publish("http://localhost:9991/ws/ServiceLivraison", livraison);
