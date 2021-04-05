@@ -1,4 +1,4 @@
-###1) Pour utiliser l'application avec les autres modules :
+###1) Pour utiliser l'application avec les autres modules
 
 ####Aller dans le module **gestionnaire** : 
 
@@ -17,7 +17,7 @@
 - Les autres modules peuvent être utilisés
 
 
-###2) Pour utiliser l'application en WAR dans un Docker :
+###2) Pour utiliser l'application en WAR dans un Docker
 
 ####Aller dans le module **gestionnaire** :
 
@@ -29,3 +29,9 @@
 
 - docker run --rm --name ServiceClient -v "chemin/vers/gestionnaire-v1.war:/usr/local/tomcat/webapps/ws.war" -it -p 8080:8080 tomcat:9.0.12-jre11-slim
 
+
+###3) Test des services
+
+Les services sont accessibles à l'adresse http://localhost:9991/ws/service?wsdl, en remplaçant "*service*" par le service voulu (*client*, *inventaire*, *livraison* ou *preparation*).
+
+L'utilisation des services est donnée dans la Javadoc.
